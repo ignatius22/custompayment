@@ -26,7 +26,7 @@ const configPath = path.join(__dirname, 'config.json');
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
 // Initiate Payment Route
-app.post('/filter_custom_gateway_pay', async (req, res, next) => {
+app.post('/filter_paymethod_paystack_pay', async (req, res, next) => {
   const { cart, paymethod_data } = req.body.data;
 
   try {
@@ -59,7 +59,7 @@ app.post('/filter_custom_gateway_pay', async (req, res, next) => {
 });
 
 // Confirm Payment Route
-app.post('/filter_custom_gateway_confirm', async (req, res, next) => {
+app.post('/filter_paymethod_paystack_confirm', async (req, res, next) => {
   const { pay_reference } = req.body.data;
 
   try {

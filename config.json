@@ -2,7 +2,7 @@
     "name": "Custom Paymethod Plugin",
     "description": "A custom payment method for orders",
     "author": "StoreKonet",
-    "url": "https://MyhostPlugin.storekonet.com",
+    "url": "https://www.storekonet.com",
     "version": "1.0.0",
     "models": [
       {
@@ -20,8 +20,8 @@
         "payment_failure": "/action_payment_failure"
       },
       "filters": {
-        "paymethod_custom_gateway_pay": ["/filter_custom_gateway_pay"],
-        "paymethod_custom_gateway_confirm": ["/filter_custom_gateway_confirm"],
+        "paymethod_paystack_pay": ["/filter_paymethod_paystack_pay"],
+        "paymethod_paystack_confirm": ["/filter_paymethod_paystack_confirm"],
         "order_confirmed": "/filter_order_confirmed.php",
         "order_failed": "/filter_order_failed",
         "order_refund": "/filter_order_refund"
