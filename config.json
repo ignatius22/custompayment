@@ -1,0 +1,31 @@
+{
+    "name": "Custom Paymethod Plugin",
+    "description": "A custom payment method for orders",
+    "author": "StoreKonet",
+    "url": "https://MyhostPlugin.storekonet.com",
+    "version": "1.0.0",
+    "models": [
+      {
+        "model_name": "Paymethod",
+        "name": "Paystack",
+        "gateway": "paystack"
+      }
+    ],
+    "hooks": {
+      "actions": {
+        "order_create": "/action_order_create.php",
+        "order_update": "/action_order_update.php",
+        "order_delete": "/action_order_delete.php",
+        "payment_success": "/action_payment_success",
+        "payment_failure": "/action_payment_failure"
+      },
+      "filters": {
+        "paymethod_custom_gateway_pay": ["/filter_custom_gateway_pay"],
+        "paymethod_custom_gateway_confirm": ["/filter_custom_gateway_confirm"],
+        "order_confirmed": "/filter_order_confirmed.php",
+        "order_failed": "/filter_order_failed",
+        "order_refund": "/filter_order_refund"
+      }
+    }
+  }
+  
